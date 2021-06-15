@@ -1,7 +1,7 @@
 import Head from 'next/head'
-// import styles from '../styles/Home.module.css'
 import DefaultLayout from "../layouts/DefaultLayout";
 import ConcertCalendar from '../components/ConcertCalendar'
+import ConcertView from '../components/ConcertView'
 
 export default function Home() {
     return (
@@ -12,7 +12,14 @@ export default function Home() {
 
             <DefaultLayout>
                 <main>
-                    <ConcertCalendar />
+                    <div className={'row'}>
+                        <div className={'col-md-8'}>
+                            <ConcertCalendar />
+                        </div>
+                        <div className={'col-md-4'}>
+                            <ConcertView />
+                        </div>
+                    </div>
                 </main>
             </DefaultLayout>
 
